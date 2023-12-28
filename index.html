@@ -127,13 +127,15 @@
     </section>
 
     <footer>
-        &copy; 2023 alwina harutyunyan. all rights reserved.
+        &copy; <span id="currentYear"></span> alwina harutyunyan. all rights reserved.
     </footer>
 
     <script>
         // JavaScript to change the active image every 3 seconds
         const activeImg = document.querySelector('.activeImg')
         let currentIndex = 0;
+        const currentYear = document.querySelector('#currentYear')
+        currentYear.innerHTML = new Date().getFullYear()
 
         function changeImage() {
             currentIndex = (currentIndex + 1) % 3;
